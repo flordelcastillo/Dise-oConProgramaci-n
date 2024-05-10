@@ -1,0 +1,14 @@
+Fondo de la página: #f4f4f4
+
+Fondo del encabezado: #333
+Fuente del encabezado: #fff
+
+Fondo de la barra de navegación: #444
+
+Fondo de la barra de navegación "activo": #555
+Fuente de la barra de navegación "activo":  #fff
+
+Fondo de las secciones: #fff
+
+Fondo del pie de página: #333
+Fuente del pie de página: #fff

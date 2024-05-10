@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Florencia</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .encabezado-foto {
+            display: flex;
+            align-items: center;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .encabezado-foto h1 {
+            margin: 0;
+            margin-left: 20px; /* Ajuste del margen para el encabezado */
+            animation: slide-in 1s ease; /* Animación para el encabezado */
+        }
+
+        @keyframes slide-in {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .foto {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: zoom-in 1s ease; /* Animación para la foto */
+        }
+
+        @keyframes zoom-in {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        nav {
+            background-color: #495057;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #6c757d;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fade-in 0.8s ease;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para las tarjetas de proyectos */
+        #proyectos-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .proyecto {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-5px);
+        }
+
+        .proyecto img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            filter: brightness(70%);
+        }
+
+        .proyecto h3 {
+            margin: 20px 0 10px; /* Ajuste del margen para el título del proyecto */
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .proyecto p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* Estilo para los botones de Ver código */
+        .ver-codigo {
+            display: inline-block;
+            background-color: #28a745; /* Cambio de color del botón */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 15px; /* Ajuste del margen superior para el botón */
+        }
+
+        .ver-codigo:hover {
+            background-color: #218838; /* Cambio de color al pasar el ratón */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Encabezado con foto -->
+    <div class="encabezado-foto">
+        <img src="icon.jpeg" alt="Foto de Florencia" class="foto">
+        <header>
+            <h1>Portafolio de Florencia</h1>
+        </header>
+    </div>
+
+    <nav>
+        <a href="#acerca-de">Acerca de mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="acerca-de">
+        <h2>Acerca de mí</h2>
+        <p>¡Hola! Soy Florencia. Soy estudiante de 3° año de la carrera Ingeniería en Sistemas de Información en la Universidad Nacional de Villa Mercedes. Tengo experiencia con lenguajes de programación como C, Java y JavaScript.</p>
+    </section>
+
+    <section id="proyectos">
+        <h2>Proyectos</h2>
+        <div id="proyectos-container">
+            <div class="proyecto">
+                <img src="Proyecto1.png" alt="Proyecto 1">
+                <h3>Implementación de To-Do List en NodeJS y TypeScript</h3>
+                <button class="ver-codigo" onclick="window.location.href='https://github.com/flordelcastillo/PdeP---Integrador'">Ver código</button>
+            </div>
+            <div class="proyecto">
+                <img src="Proyecto2.png" alt="Proyecto 2">
+                <h3>Sistema de Gestión de Escuela</h3>
+                <button class="ver-codigo" onclick="window.location.href='https://replit.com/@flordelcastillo/Sistemas'">Ver código</button>
+            </div>
+            <div class="proyecto">
+                <img src="Proyecto3.png" alt="Proyecto 3">
+                <h3>Hashing con Lista Enlazada</h3>
+                <button class="ver-codigo" onclick="window.location.href='https://replit.com/@flordelcastillo/Tabla-Dispersa-Enlazada'">Ver código</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a través de:</p>
+        <ul>
+            <li>Email: florfvidela@gmail.com</li>
+            <li>Teléfono: 1234 56-789</li>
+            <li>Redes Sociales: ...</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Derechos de autor © 2024 Florencia. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
